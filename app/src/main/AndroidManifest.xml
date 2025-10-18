@@ -1,8 +1,8 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.vocabqueue">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,8 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:name=".MainApplication"
-        android:theme="@style/Theme.VocabQueue"
-        
+        android:theme="@style/Theme.VocabQueue">
+
+        <!-- Activity xuất hiện khi chọn "Thêm vào từ vựng" -->
         <activity
             android:name=".ui.AddWordActivity"
             android:exported="true"
@@ -23,11 +24,13 @@
             </intent-filter>
         </activity>
 
+        <!-- Cài đặt -->
         <activity
             android:name=".ui.SettingsActivity"
             android:exported="false"
             android:label="@string/settings" />
 
+        <!-- Màn hình chính -->
         <activity
             android:name=".ui.MainActivity"
             android:exported="true">
@@ -36,6 +39,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
