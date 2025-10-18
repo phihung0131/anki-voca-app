@@ -48,7 +48,6 @@ dependencies {
     // Compose BOM
     val composeBom = platform("androidx.compose:compose-bom:2024.09.02")
     implementation(composeBom)
-    implementation("androidx.compose.material3:material3")
     androidTestImplementation(composeBom)
 
     // Core + Compose
@@ -57,6 +56,7 @@ dependencies {
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
+    implementation("com.google.android.material:material:1.11.0")
 
     // Lifecycle
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.6")
