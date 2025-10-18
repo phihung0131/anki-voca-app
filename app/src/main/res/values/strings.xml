@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">VocabQueue</string>
+    <string name="action_add_vocab">Thêm vào từ vựng</string>
+    <string name="settings">Cài đặt</string>
+    <string name="server_url">Server URL</string>
+    <string name="ai_key">AI API Key</string>
+    <string name="save">Lưu</string>
+    <string name="gen_now">Gen collocations</string>
+    <string name="delete_all">Xóa hết</string>
+    <string name="view_all">Xem tất cả</string>
+</resources>
