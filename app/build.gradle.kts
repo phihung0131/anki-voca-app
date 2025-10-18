@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.compose") version "2.0.20"
+    id("com.google.devtools.ksp") version "1.9.22-1.0.17"
 }
 
 android {
@@ -42,6 +43,10 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = "1.7.2"
     }
+
+    dexOptions {
+        javaMaxHeapSize = "4g"
+    }
 }
 
 dependencies {
@@ -60,7 +65,21 @@ dependencies {
 
     // Lifecycle
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.6")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6")
 
+    // Room dependencies
+    val roomVersion = "2.6.1"
+    implementation("androidx.room:room-runtime:$roomVersion")
+    ksp("androidx.room:room-compiler:$roomVersion")
+    implementation("androidx.room:room-ktx:$roomVersion")
+    
+    // DataStore
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+    
+    // Network dependencies
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("com.google.code.gson:gson:2.10.1")
+    
     // Debug tools
     debugImplementation("androidx.compose.ui:ui-tooling")
 }
